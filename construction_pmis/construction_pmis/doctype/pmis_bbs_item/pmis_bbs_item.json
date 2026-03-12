@@ -1,0 +1,76 @@
+{
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bar_mark",
+  "bar_diameter",
+  "bar_shape",
+  "cutting_length",
+  "number_of_bars",
+  "unit_weight",
+  "total_weight",
+  "element",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "bar_mark",
+   "fieldtype": "Data",
+   "label": "Bar Mark",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "bar_diameter",
+   "fieldtype": "Int",
+   "label": "Bar Diameter (mm)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "bar_shape",
+   "fieldtype": "Link",
+   "label": "Bar Shape",
+   "options": "PMIS Rebar Shape",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cutting_length",
+   "fieldtype": "Float",
+   "label": "Cutting Length (m)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "number_of_bars",
+   "fieldtype": "Int",
+   "label": "Number of Bars",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "unit_weight",
+   "fieldtype": "Float",
+   "label": "Unit Weight (kg/m)"
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight (kg)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "element",
+   "fieldtype": "Data",
+   "label": "Element"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "istable": 1,
+ "module": "Construction PMIS",
+ "name": "PMIS BBS Item",
+ "owner": "Administrator"
+}

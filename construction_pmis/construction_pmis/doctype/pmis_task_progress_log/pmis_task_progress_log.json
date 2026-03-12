@@ -1,0 +1,91 @@
+{
+ "allow_rename": 1,
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "task",
+  "posting_date",
+  "previous_progress",
+  "current_progress",
+  "qty_completed",
+  "uom",
+  "recorded_by",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "PMIS Project",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "PMIS Task",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1,
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "previous_progress",
+   "fieldtype": "Percent",
+   "label": "Previous Progress %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_progress",
+   "fieldtype": "Percent",
+   "label": "Current Progress %",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "qty_completed",
+   "fieldtype": "Float",
+   "label": "Qty Completed"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "recorded_by",
+   "fieldtype": "Link",
+   "label": "Recorded By",
+   "options": "User",
+   "default": "session_user"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "module": "Construction PMIS",
+ "name": "PMIS Task Progress Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  }
+ ]
+}

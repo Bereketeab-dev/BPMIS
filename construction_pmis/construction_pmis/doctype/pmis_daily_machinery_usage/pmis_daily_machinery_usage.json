@@ -1,0 +1,63 @@
+{
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task",
+  "machinery_type",
+  "machinery_identifier",
+  "quantity_used",
+  "working_hours",
+  "idle_hours",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "PMIS Task",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "machinery_type",
+   "fieldtype": "Link",
+   "label": "Machinery Type",
+   "options": "PMIS Machinery Type",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "machinery_identifier",
+   "fieldtype": "Data",
+   "label": "Machinery Identifier",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "quantity_used",
+   "fieldtype": "Int",
+   "label": "Quantity Used",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "working_hours",
+   "fieldtype": "Float",
+   "label": "Working Hours"
+  },
+  {
+   "fieldname": "idle_hours",
+   "fieldtype": "Float",
+   "label": "Idle Hours"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "istable": 1,
+ "module": "Construction PMIS",
+ "name": "PMIS Daily Machinery Usage",
+ "owner": "Administrator"
+}

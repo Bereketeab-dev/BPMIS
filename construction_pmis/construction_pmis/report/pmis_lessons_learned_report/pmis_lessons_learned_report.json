@@ -1,0 +1,10 @@
+{
+ "add_total_row": 1,
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "Construction PMIS",
+ "name": "PMIS Lessons Learned Report",
+ "ref_doctype": "PMIS Lesson Learned",
+ "report_type": "Query Report"
+}

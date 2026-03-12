@@ -1,0 +1,49 @@
+{
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task",
+  "manpower_type",
+  "quantity_used",
+  "hours",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "PMIS Task",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "manpower_type",
+   "fieldtype": "Data",
+   "label": "Manpower Type",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity_used",
+   "fieldtype": "Int",
+   "label": "Quantity Used",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Float",
+   "label": "Hours"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "istable": 1,
+ "module": "Construction PMIS",
+ "name": "PMIS Daily Manpower Usage",
+ "owner": "Administrator"
+}

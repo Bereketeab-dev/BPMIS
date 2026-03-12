@@ -1,0 +1,155 @@
+{
+ "allow_rename": 1,
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "certificate_no",
+  "certificate_type",
+  "subcontract_agreement",
+  "contractor_or_subcontractor",
+  "certificate_date",
+  "sb1",
+  "billing_period_from",
+  "billing_period_to",
+  "sb2",
+  "total_claimed_amount",
+  "total_certified_amount",
+  "total_paid_amount",
+  "balance_amount",
+  "currency",
+  "status",
+  "items",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "PMIS Project",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "certificate_no",
+   "fieldtype": "Data",
+   "label": "Certificate No",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "certificate_type",
+   "fieldtype": "Link",
+   "label": "Certificate Type",
+   "options": "PMIS Payment Certificate Type"
+  },
+  {
+   "fieldname": "subcontract_agreement",
+   "fieldtype": "Link",
+   "label": "Subcontract Agreement",
+   "options": "PMIS Subcontract Agreement"
+  },
+  {
+   "fieldname": "contractor_or_subcontractor",
+   "fieldtype": "Data",
+   "label": "Contractor / Subcontractor",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "certificate_date",
+   "fieldtype": "Date",
+   "label": "Certificate Date",
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb1",
+   "fieldtype": "Section Break",
+   "label": "Billing Period"
+  },
+  {
+   "fieldname": "billing_period_from",
+   "fieldtype": "Date",
+   "label": "From"
+  },
+  {
+   "fieldname": "billing_period_to",
+   "fieldtype": "Date",
+   "label": "To"
+  },
+  {
+   "fieldname": "sb2",
+   "fieldtype": "Section Break",
+   "label": "Amounts"
+  },
+  {
+   "fieldname": "total_claimed_amount",
+   "fieldtype": "Currency",
+   "label": "Total Claimed",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_certified_amount",
+   "fieldtype": "Currency",
+   "label": "Total Certified",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Total Paid",
+   "options": "currency"
+  },
+  {
+   "fieldname": "balance_amount",
+   "fieldtype": "Currency",
+   "label": "Balance",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "default": "USD"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nCertified\nPaid\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Certificate Items",
+   "options": "PMIS Payment Certificate Item"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "module": "Construction PMIS",
+ "name": "PMIS Payment Certificate",
+ "autoname": "field:certificate_no",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  }
+ ]
+}

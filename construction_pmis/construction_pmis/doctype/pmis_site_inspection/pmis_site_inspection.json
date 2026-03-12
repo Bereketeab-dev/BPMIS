@@ -1,0 +1,99 @@
+{
+ "allow_rename": 1,
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "inspection_date",
+  "inspection_type",
+  "inspected_area",
+  "inspector",
+  "contractor_rep",
+  "consultant_rep",
+  "result",
+  "status",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "PMIS Project",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "label": "Inspection Date",
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "inspection_type",
+   "fieldtype": "Link",
+   "label": "Inspection Type",
+   "options": "PMIS Inspection Type",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "inspected_area",
+   "fieldtype": "Data",
+   "label": "Inspected Area",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "inspector",
+   "fieldtype": "Link",
+   "label": "Inspector",
+   "options": "User",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "contractor_rep",
+   "fieldtype": "Data",
+   "label": "Contractor Rep"
+  },
+  {
+   "fieldname": "consultant_rep",
+   "fieldtype": "Data",
+   "label": "Consultant Rep"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "Pending\nPass\nFail\nPass with Comments",
+   "default": "Pending",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nRequested\nIn Progress\nClosed\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "module": "Construction PMIS",
+ "name": "PMIS Site Inspection",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  }
+ ]
+}

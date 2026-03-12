@@ -1,0 +1,183 @@
+{
+ "allow_rename": 1,
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "schedule",
+  "task_code",
+  "task_name",
+  "parent_task",
+  "task_type",
+  "status",
+  "progress_percent",
+  "sb1",
+  "planned_start",
+  "planned_finish",
+  "planned_duration",
+  "sb2",
+  "actual_start",
+  "actual_finish",
+  "actual_duration",
+  "sb3",
+  "responsible_person",
+  "priority",
+  "linked_boq_item",
+  "linked_subcontract_item",
+  "description",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "PMIS Project",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "schedule",
+   "fieldtype": "Link",
+   "label": "Schedule",
+   "options": "PMIS Schedule",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "task_code",
+   "fieldtype": "Data",
+   "label": "Task Code",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "task_name",
+   "fieldtype": "Data",
+   "label": "Task Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "parent_task",
+   "fieldtype": "Link",
+   "label": "Parent Task",
+   "options": "PMIS Task"
+  },
+  {
+   "fieldname": "task_type",
+   "fieldtype": "Link",
+   "label": "Task Type",
+   "options": "PMIS Task Type"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Not Started\nIn Progress\nCompleted\nOn Hold\nCancelled",
+   "default": "Not Started",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "progress_percent",
+   "fieldtype": "Percent",
+   "label": "Progress %",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb1",
+   "fieldtype": "Section Break",
+   "label": "Planning"
+  },
+  {
+   "fieldname": "planned_start",
+   "fieldtype": "Date",
+   "label": "Planned Start"
+  },
+  {
+   "fieldname": "planned_finish",
+   "fieldtype": "Date",
+   "label": "Planned Finish"
+  },
+  {
+   "fieldname": "planned_duration",
+   "fieldtype": "Int",
+   "label": "Planned Duration (Days)"
+  },
+  {
+   "fieldname": "sb2",
+   "fieldtype": "Section Break",
+   "label": "Actuals"
+  },
+  {
+   "fieldname": "actual_start",
+   "fieldtype": "Date",
+   "label": "Actual Start"
+  },
+  {
+   "fieldname": "actual_finish",
+   "fieldtype": "Date",
+   "label": "Actual Finish"
+  },
+  {
+   "fieldname": "actual_duration",
+   "fieldtype": "Int",
+   "label": "Actual Duration (Days)"
+  },
+  {
+   "fieldname": "sb3",
+   "fieldtype": "Section Break",
+   "label": "Assignments & Links"
+  },
+  {
+   "fieldname": "responsible_person",
+   "fieldtype": "Link",
+   "label": "Responsible Person",
+   "options": "User"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "linked_boq_item",
+   "fieldtype": "Link",
+   "label": "Linked BOQ Item",
+   "options": "PMIS BOQ Item"
+  },
+  {
+   "fieldname": "linked_subcontract_item",
+   "fieldtype": "Link",
+   "label": "Linked Subcontract Item",
+   "options": "PMIS Subcontract Item"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "module": "Construction PMIS",
+ "name": "PMIS Task",
+ "autoname": "format:{project}-{task_code}",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  }
+ ]
+}

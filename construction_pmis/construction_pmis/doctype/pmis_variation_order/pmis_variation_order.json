@@ -1,0 +1,123 @@
+{
+ "allow_rename": 1,
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "variation_no",
+  "variation_type",
+  "instruction_date",
+  "status",
+  "description",
+  "reason",
+  "linked_boq_item",
+  "linked_task",
+  "cost_impact",
+  "time_impact_days",
+  "requested_by",
+  "approved_by",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "PMIS Project",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "variation_no",
+   "fieldtype": "Data",
+   "label": "Variation No",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "variation_type",
+   "fieldtype": "Link",
+   "label": "Variation Type",
+   "options": "PMIS Variation Type"
+  },
+  {
+   "fieldname": "instruction_date",
+   "fieldtype": "Date",
+   "label": "Instruction Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nApproved\nRejected\nImplemented",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason for Variation"
+  },
+  {
+   "fieldname": "linked_boq_item",
+   "fieldtype": "Link",
+   "label": "Linked BOQ Item",
+   "options": "PMIS BOQ Item"
+  },
+  {
+   "fieldname": "linked_task",
+   "fieldtype": "Link",
+   "label": "Linked Task",
+   "options": "PMIS Task"
+  },
+  {
+   "fieldname": "cost_impact",
+   "fieldtype": "Currency",
+   "label": "Cost Impact",
+   "options": "currency"
+  },
+  {
+   "fieldname": "time_impact_days",
+   "fieldtype": "Int",
+   "label": "Time Impact (Days)"
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "label": "Requested By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "module": "Construction PMIS",
+ "name": "PMIS Variation Order",
+ "autoname": "field:variation_no",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  }
+ ]
+}

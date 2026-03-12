@@ -1,0 +1,132 @@
+{
+ "allow_rename": 1,
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "rfi_number",
+  "subject",
+  "category",
+  "status",
+  "date_raised",
+  "response_due_date",
+  "response_received_date",
+  "question",
+  "response_text",
+  "raised_by",
+  "recipient",
+  "linked_task",
+  "linked_drawing",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "PMIS Project",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rfi_number",
+   "fieldtype": "Data",
+   "label": "RFI Number",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "PMIS RFI Category",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nSubmitted\nResponded\nClosed\nCancelled",
+   "default": "Open",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "date_raised",
+   "fieldtype": "Date",
+   "label": "Date Raised",
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "response_due_date",
+   "fieldtype": "Date",
+   "label": "Response Due Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "response_received_date",
+   "fieldtype": "Date",
+   "label": "Response Received Date"
+  },
+  {
+   "fieldname": "question",
+   "fieldtype": "Text Editor",
+   "label": "Question"
+  },
+  {
+   "fieldname": "response_text",
+   "fieldtype": "Text Editor",
+   "label": "Response"
+  },
+  {
+   "fieldname": "raised_by",
+   "fieldtype": "Link",
+   "label": "Raised By",
+   "options": "User"
+  },
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Data",
+   "label": "Recipient"
+  },
+  {
+   "fieldname": "linked_task",
+   "fieldtype": "Link",
+   "label": "Linked Task",
+   "options": "PMIS Task"
+  },
+  {
+   "fieldname": "linked_drawing",
+   "fieldtype": "Link",
+   "label": "Linked Drawing",
+   "options": "PMIS As-Built Drawing"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "module": "Construction PMIS",
+ "name": "PMIS RFI",
+ "autoname": "field:rfi_number",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "allow_rename": 1,
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "model_reference",
+  "structure_element",
+  "drawing_reference",
+  "status",
+  "items",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "PMIS Project",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "model_reference",
+   "fieldtype": "Data",
+   "label": "Model Reference",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "structure_element",
+   "fieldtype": "Data",
+   "label": "Structure Element",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "drawing_reference",
+   "fieldtype": "Link",
+   "label": "Drawing Reference",
+   "options": "PMIS As-Built Drawing"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nApproved\nActive\nSuperseded",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "BBS Items",
+   "options": "PMIS BBS Item"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "module": "Construction PMIS",
+ "name": "PMIS Rebar Model",
+ "autoname": "field:model_reference",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  }
+ ]
+}

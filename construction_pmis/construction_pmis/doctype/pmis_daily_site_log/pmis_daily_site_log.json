@@ -1,0 +1,141 @@
+{
+ "allow_rename": 1,
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "log_date",
+  "shift",
+  "weather",
+  "site_conditions",
+  "status",
+  "prepared_by",
+  "approved_by",
+  "sb1",
+  "summary_of_work",
+  "issues_observed",
+  "delays",
+  "sb2",
+  "manpower",
+  "machinery",
+  "material",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "PMIS Project",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "log_date",
+   "fieldtype": "Date",
+   "label": "Log Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "Day\nNight",
+   "default": "Day",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "weather",
+   "fieldtype": "Data",
+   "label": "Weather"
+  },
+  {
+   "fieldname": "site_conditions",
+   "fieldtype": "Small Text",
+   "label": "Site Conditions"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nApproved\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "sb1",
+   "fieldtype": "Section Break",
+   "label": "Execution Summary"
+  },
+  {
+   "fieldname": "summary_of_work",
+   "fieldtype": "Small Text",
+   "label": "Summary of Work"
+  },
+  {
+   "fieldname": "issues_observed",
+   "fieldtype": "Small Text",
+   "label": "Issues Observed"
+  },
+  {
+   "fieldname": "delays",
+   "fieldtype": "Small Text",
+   "label": "Delays"
+  },
+  {
+   "fieldname": "sb2",
+   "fieldtype": "Section Break",
+   "label": "Resources Used"
+  },
+  {
+   "fieldname": "manpower",
+   "fieldtype": "Table",
+   "label": "Manpower Usage",
+   "options": "PMIS Daily Manpower Usage"
+  },
+  {
+   "fieldname": "machinery",
+   "fieldtype": "Table",
+   "label": "Machinery Usage",
+   "options": "PMIS Daily Machinery Usage"
+  },
+  {
+   "fieldname": "material",
+   "fieldtype": "Table",
+   "label": "Material Usage",
+   "options": "PMIS Daily Material Usage"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "module": "Construction PMIS",
+ "name": "PMIS Daily Site Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+[
+ { "doctype": "Role", "role_name": "PMIS Administrator" },
+ { "doctype": "Role", "role_name": "PMIS Project Manager" },
+ { "doctype": "Role", "role_name": "PMIS Planner" },
+ { "doctype": "Role", "role_name": "PMIS Site Engineer" },
+ { "doctype": "Role", "role_name": "PMIS Quantity Surveyor" },
+ { "doctype": "Role", "role_name": "PMIS Document Controller" },
+ { "doctype": "Role", "role_name": "PMIS QA/QC Engineer" },
+ { "doctype": "Role", "role_name": "PMIS Safety Officer" },
+ { "doctype": "Role", "role_name": "PMIS Commercial Manager" },
+ { "doctype": "Role", "role_name": "PMIS Viewer" }
+]

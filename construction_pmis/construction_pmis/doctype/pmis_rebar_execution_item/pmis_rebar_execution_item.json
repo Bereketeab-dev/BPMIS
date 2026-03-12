@@ -1,0 +1,49 @@
+{
+ "creation": "2023-10-27 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bbs_item",
+  "executed_qty",
+  "executed_weight",
+  "linked_task",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "bbs_item",
+   "fieldtype": "Data",
+   "label": "BBS Item Ref",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "executed_qty",
+   "fieldtype": "Int",
+   "label": "Executed Qty (Bars)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "executed_weight",
+   "fieldtype": "Float",
+   "label": "Executed Weight (kg)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "linked_task",
+   "fieldtype": "Link",
+   "label": "Linked Task",
+   "options": "PMIS Task"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "istable": 1,
+ "module": "Construction PMIS",
+ "name": "PMIS Rebar Execution Item",
+ "owner": "Administrator"
+}
